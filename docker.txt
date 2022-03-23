@@ -1,13 +1,13 @@
 & docker container run -t ubuntu top --starts a docker pull to download the Ubuntu image onto your host
 docker container exec --allows you to enter a running container's namespaces with a new proces
-ssh (port*) --связать новый терминал с контейнером по Ip
+ssh (port*) --СЃРІСЏР·Р°С‚СЊ РЅРѕРІС‹Р№ С‚РµСЂРјРёРЅР°Р» СЃ РєРѕРЅС‚РµР№РЅРµСЂРѕРј РїРѕ Ip
 docker container ls --get the ID of the running container 
-docker container exec -it (container_id*)  bash --перейти в контейнер для выполнения баш скриптов
-ps -ef --посмотреть процессы 
-если прописать Image без версии, будет скачана последняя, ечли же указать mongo:3.4 например, то загрузится именно эта версия для монгодб
-docker container run --detach --publish 8080:80 --name nginx nginx --разместить nginx веб сервер на указанном порте
-docker container stop [container id*] --остановить контейнер
-docker system prune --удаляет остановленные контейнеры, неиспользуемые тома и сети, зависшие образы
+docker container exec -it (container_id*)  bash --РїРµСЂРµР№С‚Рё РІ РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р±Р°С€ СЃРєСЂРёРїС‚РѕРІ
+ps -ef --РїРѕСЃРјРѕС‚СЂРµС‚СЊ РїСЂРѕС†РµСЃСЃС‹ 
+С‚С‹РІРЈ в„–В­Р¬в„–РЈС‹РЇР«Р§ Image СЂС‚Сѓ Р С‚В­С‹РЈРЈ, СЂР·РЎС‚Р« С‹Р–РЇСЌРЇСЊРЇ в„–Р¬С‹РІС‚РЎСЊВ В , С‚СЌРІРЈ РўС‚ Р·Р–РЇСѓРЇР«Р§ mongo:3.4 СЊРЇв„–В­РЈР’С‚В­, Р«Р¬ СѓРЇСЃВ­Р·СѓРЈР«С‹В  РЈР’С‚СЊСЊР¬ В§Р«РЇ Р С‚В­С‹РЈВ  РЎРІВ  Р’Р¬СЊСЃР¬РЎСЂ
+docker container run --detach --publish 8080:80 --name nginx nginx --В­РЇСѓР’С‚С‹Р«РЈР«Р§ nginx Р С‚СЂ С‹С‚В­Р С‚В­ СЊРЇ Р·Р–РЇСѓРЇСЊСЊР¬Р’ в„–Р¬В­Р«С‚
+docker container stop [container id*] --Р¬С‹Р«РЇСЊР¬Р РЈР«Р§ Р–Р¬СЊР«С‚Р¶СЊС‚В­
+docker system prune --Р·РЎРЇРІВ С‚Р« Р¬С‹Р«РЇСЊР¬Р РІС‚СЊСЊС‡С‚ Р–Р¬СЊР«С‚Р¶СЊС‚В­С‡, СЊС‚РЈС‹в„–Р¬РІР§СѓР·С‚Р’С‡С‚ Р«Р¬Р’РЇ РЈ С‹С‚Р«РЈ, СѓРЇР РЈС‹Р­РЈС‚ Р¬СЂВ­РЇСѓС‡
 docker image build -t [name*] --build the docker image
 docker image ls --get the image list
 docker run -p 5001:5000 -d [name*] --run the image
@@ -28,4 +28,4 @@ You can fine-tune the rolling update by using these options:
 --update-parallelism: specifies the number of containers to update immediately (defaults to 1).
 --update-delay: specifies the delay between finishing updating a set of containers before moving on to the next set.
 
-docker swarm leave --нода покинет кластер
+docker swarm leave --СЊР¬РЎРЇ в„–Р¬Р–РЈСЊС‚Р« Р–РІРЇС‹Р«С‚В­

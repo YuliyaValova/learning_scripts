@@ -4,10 +4,10 @@ ssh (port*) --связать новый терминал с контейнеро
 docker container ls --get the ID of the running container 
 docker container exec -it (container_id*)  bash --перейти в контейнер для выполнения баш скриптов
 ps -ef --посмотреть процессы 
-тывУ №­Ь№УыЯЫЧ Image рту Рт­ыУУ, рзСтЫ ыЖЯэЯьЯ №ЬывтСь  , тэвУ Тт зЖЯуЯЫЧ mongo:3.4 ьЯ№­УВт­, ЫЬ уЯс­зуУЫы  УВтььЬ §ЫЯ Рт­ыУ  Св  ВЬьсЬСр
-docker container run --detach --publish 8080:80 --name nginx nginx --­ЯуВтыЫУЫЧ nginx Ртр ыт­Рт­ ьЯ зЖЯуЯььЬВ №Ь­Ыт
-docker container stop [container id*] --ЬыЫЯьЬРУЫЧ ЖЬьЫтжьт­
-docker system prune --зСЯв тЫ ЬыЫЯьЬРвтььчт ЖЬьЫтжьт­ч, ьтУы№ЬвЧузтВчт ЫЬВЯ У ытЫУ, уЯРУыЭУт Ьр­Яуч
+если прописать Image без версии, будет скачана последняя, ечли же указать mongo:3.4 например, то загрузится именно эта версия для монгодб
+docker container run --detach --publish 8080:80 --name nginx nginx --разместить nginx веб сервер на указанном порте
+docker container stop [container id*] --остановить контейнер
+docker system prune --удаляет остановленные контейнеры, неиспользуемые тома и сети, зависшие образы
 docker image build -t [name*] --build the docker image
 docker image ls --get the image list
 docker run -p 5001:5000 -d [name*] --run the image
@@ -28,4 +28,4 @@ You can fine-tune the rolling update by using these options:
 --update-parallelism: specifies the number of containers to update immediately (defaults to 1).
 --update-delay: specifies the delay between finishing updating a set of containers before moving on to the next set.
 
-docker swarm leave --ьЬСЯ №ЬЖУьтЫ ЖвЯыЫт­
+docker swarm leave --нода покинет кластер
